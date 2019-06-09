@@ -6,7 +6,7 @@ const POKEMONS_URL = `${BASE_URL}/pokemons`
 
 
 
-// we're going to add an event listened after the DOM has loaded
+// we're going to add an event listener after the DOM has loaded
 // so that all of our functionality is loaded after the initial DOM
 window.addEventListener('DOMContentLoaded', (event) => {
 
@@ -91,7 +91,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     .then(response => response.json())
     // THEN (hint, hint, THEN) we will return the promise and parse into JSON //
     .then(pokemon => {
-    // THEN (hint, hint) the promise will return the pokemon //
+    // THEN (hint, hint) the promise has returned the pokemon //
     // that we deleted from the API //
       // console.log(pokemon);
       document.getElementById(`pokemon ${pokemon.id}`).remove()
@@ -109,7 +109,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   // LET'S ADD AN EVENT LISTENER TO THE TRAINER CONTAINER //
   // we're adding the event listener FURTHER up than either of the buttons //
   // so that the container can listened to ALL of the clicks //
-  // for either ADD or RELEASE //
+  // for either ADD *or* RELEASE //
   // ** BUBBLING MAKES THIS WORK ** //
   trainerContainer.addEventListener("click", e => {
     // we're adding a click listener //
